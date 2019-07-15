@@ -31,7 +31,7 @@ from quantopian.pipeline.data import EquityPricing
 from quantopian.pipeline.data.morningstar import Fundamentals as mF
 
 # Constraint Parameters
-MAX_GROSS_LEVERAGE = 0.7
+MAX_GROSS_LEVERAGE = 0.8
 TOTAL_POSITIONS = 600
 
 # Here we define the maximum position size that can be held for any
@@ -39,8 +39,8 @@ TOTAL_POSITIONS = 600
 # sizes should be, feel free to change them. Keep in mind that the
 # optimizer needs some leeway in order to operate. Namely, if your
 # maximum is too small, the optimizer may be overly-constrained.
-MAX_SHORT_POSITION_SIZE = 1 / TOTAL_POSITIONS
-MAX_LONG_POSITION_SIZE = 1 / TOTAL_POSITIONS
+MAX_SHORT_POSITION_SIZE = 1.5 / TOTAL_POSITIONS
+MAX_LONG_POSITION_SIZE = 5 / TOTAL_POSITIONS
 
 
 def initialize(context):
